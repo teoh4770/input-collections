@@ -1,0 +1,102 @@
+label,
+input {
+  display: block;
+}
+
+label {
+  color: var(--clr-neutral-200);
+  margin-block-end: var(--size-4);
+  text-transform: capitalize;
+  font-size: var(--fs-300);
+}
+
+input {
+  --icon-space: 2.25rem;
+  --icon-size: 1.125rem;
+  --icon-position: 0.6875rem;
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: var(--br, 8px);
+  padding: var(--size-18) var(--size-12);
+  color: var(--clr-neutral-200);
+  outline: none;
+}
+
+.icon {
+  padding-left: var(--icon-space);
+  background-image: url("https://placehold.co/20x20");
+  background-repeat: no-repeat;
+  background-position: var(--icon-position) 50%;
+  background-size: var(--icon-size);
+}
+
+.icon--rtl {
+  padding-right: var(--icon-space);
+  background-image: url("https://placehold.co/20x20");
+  background-repeat: no-repeat;
+  background-position: right var(--icon-position) top 50%;
+  background-size: var(--icon-size);
+}
+
+input[data-size="md"] {
+  padding-block: var(--size-18);
+}
+
+input[data-size="sm"] {
+  padding-block: var(--size-10);
+}
+
+input::before {
+  content: "ggwp";
+  display: inline-block;
+}
+
+input::placeholder {
+  color: var(--clr-neutral-100);
+}
+
+.control-group::after {
+  content: var(--helper-text);
+  display: block;
+  font-size: var(--fs-200);
+  color: var(--clr-neutral-100);
+  margin-block-start: var(--size-4);
+}
+
+.control-group:hover label {
+  color: var(--clr-neutral-200);
+}
+
+.control-group:hover input {
+  border-color: var(--clr-neutral-200);
+}
+
+.control-group:focus-within label {
+  color: var(--clr-primary);
+}
+
+.control-group:focus-within input {
+  border-color: var(--clr-primary);
+}
+
+input:disabled {
+  --br-clr: var(--clr-neutral-10);
+  background-color: var(--clr-neutral-50);
+  border-color: var(--br-clr);
+  pointer-events: none;
+}
+
+.control-group:hover input:disabled,
+.control-group:focus input:disabled {
+  border-color: var(--br-clr);
+}
+
+.error.control-group label,
+.error.control-group:focus-within label,
+.error.control-group::after {
+  color: var(--clr-warning);
+}
+
+.error.control-group input,
+.error.control-group:focus-within input {
+  border-color: var(--clr-warning);
+}

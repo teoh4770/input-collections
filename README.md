@@ -1,27 +1,53 @@
-# InputCollections
+colors
+- clr-neutral-50: hsla(0, 0%, 88%, 1); (input disabled gray background)
+- clr-neutral-100: hsla(0, 0%, 51%, 1)
+- clr-neutral-200: hsla(0, 0%, 20%, 1)
+- clr-primary: hsla(224, 100%, 58%, 1); 
+- clr-warning: hsla(0, 65%, 51%, 1)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
-## Development server
+font-size
+- h1: 1.5rem, poppins, 50
+- code: 0.75rem, ubuntu mono, 400
+- label: 0.75rem, noto sans jp, 400
+- placeholder: 0.75rem, noto sans jp, 500
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+font-family
+- poppins (only use this one)
+- ubuntu mono
+- noto sans jp
 
-## Code scaffolding
+space
+- size-4: 4px;
+- size-12: 12px; 
+(padding-inline)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- size-16: 16px; 
+(space between the code and the input container)
+- size-18: 18px; 
+(padding-block)
+- size-42: 42px;
 
-## Build
+border
+- border 1px, border-radius 8px
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+what is this challenge in general?
+- [ ] you gonna create different style directives based on the state of the component (in this case, an input box)
+- state include normal(when it is there), hover, focus, error, disabled state
+- for example, when user hover on a normal input box, the border color and label turns darker
 
-## Running unit tests
+- [ ]you also gonna include attribute directives
+  - helperText: the helperText directive holds a string that is render to the bottom of the input box to provide extra information to the user
+  - icon directive
+    - startIcon: place the icon at the starting position of the input box
+    - endIcon: place the icon at the end position of the input box
+  - value: this directive connects to the value attribute of the input itself
+  - size directive
+    - sm: smaller input box
+    - md: normal size input box
+  - fullWidth: the input has 100% width of the screen
+  - multiline: textarea input box that has row attribute related to it, to create multiline input
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
